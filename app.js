@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
     res.send('HomePage');
 });
 
-mongoose.connect(process.env.DB_CONNECTOR).then(() => {
+mongoose.connect(process.env.DB_CONNECTOR, {dbName: 'mini-post'}).then(() => {
     console.log('Your mongoDB connector is on... Atlas');
 })
 
